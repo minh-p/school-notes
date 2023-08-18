@@ -1,5 +1,4 @@
 #+title: README
 #+date: <2023-08-18 Fri>
 
-* README
 This will be a professional site that will store all of my notes and projects related to school, Upper-classmen High School and Beyond.
