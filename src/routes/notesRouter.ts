@@ -86,14 +86,22 @@ router.get('/', (_, res: Response) => {
   });
 });
 
-router.get('/courses-information', (_, res: Response) => {
+router.get('/Courses-Information', (_, res: Response) => {
+  const notes: Note[] = getInfo(res, INFO_DIR);
   res.render('notes', {
-    title: 'Courses Under My Belt | HMP School Notes'
+    title: 'Courses Under My Belt | HMP School Notes',
+    shortTitle: 'Courses Information',
+    notes
   });
 });
 
-router.get('/courses-concepts', (_, res: Response) => {
-  res.render('notes', { title: 'Recorded Course Concepts | HMP School Notes' });
+router.get('/Courses-Concepts', (_, res: Response) => {
+  const notes: Note[] = getInfo(res, CONCEPTS_DIR);
+  res.render('notes', {
+    title: 'Recorded Course Concepts | HMP School Notes',
+    shortTitle: 'Courses Concepts',
+    notes
+  });
 });
 
 export default router;

@@ -2,8 +2,15 @@ extends layout.pug
 
 block content
   section
-    h1 Notes
-    p Test
+    h1= shortTitle
+    if notes
+      ul
+        each note in notes
+          li
+            if note.date
+              span #{note.date}
+            a(href=`${note.link}`) #{note.title? note.title: "Unnamed Note"}
+
 
 block footer
   footer

@@ -3,20 +3,24 @@ extends layout.pug
 block content
   section
     h1 Notes
-    p Test
+    h2
+      a(href='/Notes/Courses-Information') Courses Information
     ul
       if coursesInfo
         each note in coursesInfo
           li
             if note.date
               span #{note.date}
-            a(href=`${note.link}`) #{note.title? note.title: "Test"}
+            a(href=`${note.link}`) #{note.title? note.title: "Unnamed Course Info"}
+    h2
+      a(href='/Notes/Courses-Concepts') Courses Concepts
+    ul
       if coursesConcepts
         each note in coursesConcepts
           li
             if note.date
               span #{note.date}
-            a(href=`${note.link}`) #{note.title? note.title: "Test"}
+            a(href=`${note.link}`) #{note.title? note.title: "Unnamed Course Concept"}
 
 block footer
   footer
