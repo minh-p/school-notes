@@ -1,0 +1,1 @@
+/home/hmp/org/2023/School/Courses-Information/ComputerScienceAAP.md

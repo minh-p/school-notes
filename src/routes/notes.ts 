@@ -1,0 +1,12 @@
+import express, { Response } from 'express';
+const router = express.Router();
+
+router.get('/', (_, res: Response) => {
+  res.render('indexNotes', { title: 'Content | HMP School Notes' });
+});
+
+router.get('/Courses-Information', (_, res: Response) => {
+  res.render('notes', { title: 'Courses Under My Belt | HMP School Notes' });
+});
+
+export default router;

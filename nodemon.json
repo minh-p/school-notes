@@ -1,0 +1,7 @@
+{
+  "watch": ["src"],
+  "execMap": {
+    "ts": "ts-node"
+  },
+  "ext": "ts,json,pug,css,jpeg,jpg,svg,png,md"
+}

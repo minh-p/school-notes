@@ -1,0 +1,27 @@
+extends layout.pug
+
+block content
+  section
+    h1 Notes
+    p Test
+    ul
+      if coursesInfo
+        each note in coursesInfo
+          li
+            if note.date
+              span #{note.date}
+            a(href=`${note.link}`) #{note.title? note.title: "Test"}
+      if coursesConcepts
+        each note in coursesConcepts
+          li
+            if note.date
+              span #{note.date}
+            a(href=`${note.link}`) #{note.title? note.title: "Test"}
+
+block footer
+  footer
+    div#indexfooter
+      p © HMP School Notes
+      p This site is created by Vu Huy Minh Pham.
+      p
+        a(href='mailto:minhisverynormal@gmail.com') My Email
